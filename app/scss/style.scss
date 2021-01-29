@@ -209,15 +209,15 @@
     margin-bottom: 30px;
   }
   &__problem-item {
-    @extend %purple;
+    @extend %purple_intensive;
     padding: 15px 29px;
-    border: 2px solid #A95094;
+    border: 2px solid #96317D;
     display: inline-block;
     border-radius: 15px;
     margin: 0 15px 20px 0;
     &:hover {
       @extend %white;
-      background-color: #A95094;
+      background-color: #96317D;
       transition: 0.3s;
     } 
   }
@@ -240,3 +240,64 @@
 
 
 // STYLES FOR 4th BLOCK
+.page-section-price {
+  max-width: 971px;
+  margin: 0 auto;
+  padding: 100px 0 100px 0;
+  &__title-h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  &__show-more {
+    text-align: center;
+    @extend %purple_intensive;
+    position: relative;
+    cursor: pointer;
+    &::after {
+      content: '';
+      background-image: url(../images/show-more-arrow.svg);
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      right: 380px;
+      top: -4px;
+    }
+  }
+}
+
+.table {
+  min-width: 971px;
+  @extend %TTNorms-Regular;
+  margin-bottom: 50px;
+  & td {
+    padding: 25px 0 25px 0;
+    border-bottom: 1px solid #ECECEC;
+  }
+  & th {
+    padding: 25px 0 25px 0;
+    @extend %TTNorms-Regular;
+    border-bottom: 1px solid #ECECEC;
+  }
+  &__price {
+    @extend %black;
+    @extend %TTNorms-Medium;
+    text-align: right;
+  }
+  &__no-price {
+    @extend %purple_intensive;
+    @extend %TTNorms-Medium;
+    text-align: right;
+  }
+  &__col-1 {
+    width: 621px;
+    text-align: left;
+  }
+  &__col-2 {
+    width: 175px;
+    text-align: right;
+  }
+  &__col-3 {
+    width: 175px;
+    text-align: right;
+  }
+}
