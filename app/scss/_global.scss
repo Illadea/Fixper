@@ -1,0 +1,50 @@
+html {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, 
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+ margin: 0;
+ font-size: inherit;
+}
+
+
+body {
+  background: #E5E5E5;
+  @extend %TTNorms-Medium;
+  font-size: 16px;
+  @extend %black;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.btn {
+  border-radius: 15px;
+}
