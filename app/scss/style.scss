@@ -301,3 +301,54 @@
     text-align: right;
   }
 }
+
+// STYLES FOR 5th BLOCK
+.page-section-team {
+  background-color: #E5E5E5;
+  padding: 100px 0 100px 0;
+  & span {
+    font-size: 20px;
+    @extend %purple_intensive;
+    margin: 0 auto 10px;
+    max-width: 290px;
+    display: block;
+  }
+  &__title-h2 {
+    max-width: 815px;
+    margin: 0 auto 50px;
+  }
+}
+
+.team-card-container {
+  max-width: 1182px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-card-item {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  min-height: 649px;
+  &__info {
+    padding: 50px 97px 50px 45px;
+  }
+  &__name {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  &__profession {
+    @extend %TTNorms-Regular;
+    margin-bottom: 25px;
+  }
+  &__list {
+    @extend %purple_intensive;
+    & li {
+      padding-bottom: 20px;
+      &::before {
+        content: url(../images/list-style-type.svg);
+        padding-right: 10px;
+      }
+    }
+  }
+}
