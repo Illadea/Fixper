@@ -34,7 +34,7 @@ h6 {
 
 
 body {
-  background: #E5E5E5;
+  background: #fff;
   @extend %TTNorms-Medium;
   font-size: 16px;
   @extend %black;
@@ -47,4 +47,11 @@ body {
 
 .btn {
   border-radius: 15px;
+}
+
+.title-h2 {
+  font-size: 45px;
+  letter-spacing: -0.015em;
+  line-height: 40px;
+  @extend %TTNorms-Bold;
 }

@@ -1,13 +1,12 @@
+@import "fonts";
 @import "vars";
 @import "libs";
-@import "fonts";
 @import "global";
 
 
 // Header
 .header {
   padding-top: 45px;
-  padding-bottom: 30px;
   background-color:#A95094;
   &__container {
     display: flex;
@@ -132,4 +131,78 @@
       margin-left: 25px;
     }
   }
+}
+
+// STYLES FOR 2-d BLOCK
+.page-section-advantages {
+  background-color: #fff;
+  padding: 75px 0 75px 0;
+  &__inner {
+    max-width: 1072px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.advantage {
+  max-width: 184px;
+  &__img {
+    margin-bottom: 30px;
+  }
+  &__text {
+    line-height: 120%;
+    font-size: 20px;
+  }
+}
+
+// STYLES FOR 3-d BLOCK
+.page-section-online-diagnostics {
+  background-color: #E5E5E5;
+  padding: 115px 0 149px 0;
+  &__inner {
+    max-width: 1072px;
+    margin: 0 auto;
+    background-color: #E5E5E5;
+    & span {
+      text-transform: uppercase;
+      @extend %purple;
+      margin-bottom: 15px;
+      font-size: 13px;
+      line-height: 15px;
+      letter-spacing: 0.05em;
+      @extend %TTNorms-Bold;
+      display: block;
+    }
+  }
+  &__title-h2 {
+    margin-bottom: 50px;
+  }
+  &__problems {
+    max-width: 594px;
+    margin-bottom: 50px;
+  }
+  &__problem-item {
+    @extend %purple;
+    padding: 15px 29px;
+    border: 2px solid #A95094;
+    display: inline-block;
+    border-radius: 15px;
+    margin: 0 15px 20px 0;
+    &:hover {
+      @extend %white;
+      background-color: #A95094;
+      transition: 0.3s;
+    }
+  }
+  &__text {
+    max-width: 417px;
+    padding-left: 49px;
+    &::before {
+      content: url(../images/warning.svg);
+      text-align: center;
+      position: relative;
+    }
+  }
+
 }
