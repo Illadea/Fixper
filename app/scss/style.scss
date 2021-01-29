@@ -8,6 +8,7 @@
 .header {
   padding-top: 45px;
   background-color:#A95094;
+  min-height: 10vh;
   &__container {
     display: flex;
     align-items: center;
@@ -20,6 +21,11 @@
     border: 2px solid #FFC464;
     @extend %yellow;
     @extend %TTNorms-Bold;
+    &:hover {
+      @extend %black;
+      background-color: #FFC464;
+      transition: 0.3s;
+    } 
   }
 }
 
@@ -37,6 +43,10 @@
     display: flex;
     &-item{
       margin-right: 40px;
+      &:hover {
+        @extend %black;
+        transition: 0.3s;
+      } 
     }
   }
 }
@@ -54,9 +64,12 @@
 // STYLES FOR 1-st BLOCK
 .page-section-first-screen {
   background-color:#A95094;
-  min-height: 100vh;
+  min-height: 90vh;
   background-image: url(../images/main-image.png);
   background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: contain;
+  position: relative;
 }
 
 .offer {
@@ -64,8 +77,8 @@
   max-width: 664px;
   max-height: 265px;
   position: absolute;
-  left: 641px;
-  top: 249px;
+  left: 44.5vw;
+  top: 11vw;
   &__title-h1 {
     font-size: 67px;
     @extend %TTNorms-ExtraBold;
@@ -88,6 +101,12 @@
     cursor: pointer;
     border: 2px solid #000000;
     @extend %white;
+    &:hover {
+      @extend %black;
+      background-color: #FFC464;
+      border: 2px solid #FFC464;
+      transition: 0.3s;
+    } 
   }
 }
 
@@ -95,15 +114,15 @@
   @extend %white;
   background-color: #000000;
   height: 50px;
-  border-radius: 15px;
-  max-width: 1170px;
-  margin: 0 auto;
+  max-width: 100%;
+  border-radius: 5px;
+  margin: 0 135px 0 136px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
-  position: relative;
-  top: 90vh;
+  position: absolute;
+  bottom: 20px;
   &__closing-cross {
     background-image: url(../images/cross-white.svg);
     background-repeat: no-repeat;
@@ -112,6 +131,8 @@
   }
   &__text {
     line-height: 20px;
+    position: relative;
+    padding-left: 20px;
     @extend %TTNorms-Bold;
     & span {
       @extend %yellow;
@@ -122,6 +143,9 @@
       height: 10px;
       background-color: #78C23E;
       border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 5px;
     }
   }
   &__get-discount {
@@ -136,7 +160,7 @@
 // STYLES FOR 2-d BLOCK
 .page-section-advantages {
   background-color: #fff;
-  padding: 75px 0 75px 0;
+  padding: 75px 184px;
   &__inner {
     max-width: 1072px;
     margin: 0 auto;
@@ -160,10 +184,12 @@
 .page-section-online-diagnostics {
   background-color: #E5E5E5;
   padding: 115px 0 149px 0;
+  background-image: url(../images/bg-online-diagnosics.png);
+  background-repeat: no-repeat;
+  background-position: right;
   &__inner {
     max-width: 1072px;
     margin: 0 auto;
-    background-color: #E5E5E5;
     & span {
       text-transform: uppercase;
       @extend %purple;
@@ -180,7 +206,7 @@
   }
   &__problems {
     max-width: 594px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   &__problem-item {
     @extend %purple;
@@ -193,16 +219,24 @@
       @extend %white;
       background-color: #A95094;
       transition: 0.3s;
-    }
+    } 
   }
   &__text {
     max-width: 417px;
+    position: relative; 
     padding-left: 49px;
     &::before {
-      content: url(../images/warning.svg);
-      text-align: center;
-      position: relative;
+      content: '';
+      background-image: url(../images/warning.svg);
+      background-repeat: no-repeat;
+      width: 34px;
+      height: 34px;
+      position: absolute;
+      left: 0;
+      top: -5px;
     }
   }
-
 }
+
+
+// STYLES FOR 4th BLOCK
