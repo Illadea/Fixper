@@ -182,7 +182,7 @@
 
 // STYLES FOR 3-d BLOCK
 .page-section-online-diagnostics {
-  background-color: #E5E5E5;
+  background-color: #FAFAFA;
   padding: 115px 0 149px 0;
   background-image: url(../images/bg-online-diagnosics.png);
   background-repeat: no-repeat;
@@ -304,7 +304,7 @@
 
 // STYLES FOR 5th BLOCK
 .page-section-team {
-  background-color: #E5E5E5;
+  background-color: #FAFAFA;
   padding: 100px 0 100px 0;
   & span {
     font-size: 20px;
@@ -352,3 +352,184 @@
     }
   }
 }
+
+// STYLES FOR 6th BLOCK
+.page-section-testimonials {
+  padding: 100px 0 100px 0;
+  &__title-h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
+.testimonial-card {
+  max-width: 570px;
+  background: linear-gradient(0deg, #FAFAFA, #FAFAFA), #FAE6F5;
+  margin: 15px;
+  &:nth-child(2n+1) {
+    margin-left: 0;
+  }
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+  &__inner {
+    padding: 83px 50px 75px 50px;
+  }
+  &__info {
+    display: flex;
+  }
+  &__image img {
+    border-radius: 100px;
+    margin-right: 30px;
+  }
+  &__name {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  &__date {
+    font-size: 16px;
+    @extend %TTNorms-Regular;
+  }
+  &__text {
+    max-width: 470px;
+    margin-top: 35px;
+    font-size: 18px;
+    @extend %TTNorms-Regular;
+    line-height: 150%;
+  }
+}
+
+
+// STYLES FOR 7th BLOCK
+.page-section-rating {
+  padding: 50px 0 50px 0;
+  background-color: #FAFAFA;
+}
+
+.rate-card {
+  background-color: #fff;
+  margin: 15px;
+  padding: 28px;
+  min-width: 370px;
+  border-radius: 10px;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  &__rating-info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 28px;
+  }
+  &__rating {
+    font-size: 25px;
+    margin-bottom: 5px;
+    &::before {
+      content: url(../images/rating-star.svg);
+      padding-right: 10px;
+    }
+    & span {
+      font-size: 35px;
+      @extend %TTNorms-Bold;
+    }
+  }
+  &__number-of-rating {
+    @extend %TTNorms-Regular;
+  }
+  &__img {
+    &::before {
+      content: '';
+      width: 1px;
+      height: 65px;
+      background-color: #E3E3E3;
+      display: inline-block;
+      margin-right: 29px;
+    }
+    &  img {
+      position: relative;
+      bottom: 14px;
+      right: 3px;
+    }
+  }
+}
+
+// STYLES FOR 8th BLOCK
+.page-section-faq {
+  padding: 100px 0 100px 0;
+  &__inner {
+    max-width: 1157px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__title-info {
+    margin-right: 106px;
+  }
+  &__title-h2 {
+    max-width: 329px;
+    line-height: 100%;
+    font-size: 40px;
+    @extend %TTNorms-Bold;
+  }
+  &__text {
+    font-size: 18px;
+    line-height: 150%;
+    @extend %TTNorms-Regular;
+    max-width: 301px;
+    letter-spacing: -0.05em;
+    & a {
+      @extend %purple;
+      text-decoration-line: underline;
+      @extend %TTNorms-Medium;
+    }
+  }
+}
+
+summary::-webkit-details-marker {
+  display: none; /* Убираем стандартный маркер Chrome */
+}
+
+summary {
+  list-style: none; /* Убираем стандартный маркер Firefox */
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  @extend %TTNorms-Medium;
+  padding-bottom: 10px;
+  position: relative;
+  &:focus {
+    outline: none;
+  }
+  cursor: pointer;
+}
+
+summary:after {
+  content: url(../images/faq-marker.svg);
+  transition: transform 0.2s;
+  position: absolute;
+  top: -8px;
+  right: -50px;
+}
+
+details {
+  @extend %TTNorms-Regular;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  min-width: 722px;
+  max-width: 722px;
+  background: #FAFAFA;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 25px 93px 15px 35px;
+  line-height: 150%;
+}
+

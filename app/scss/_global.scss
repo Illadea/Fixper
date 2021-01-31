@@ -55,3 +55,9 @@ body {
   line-height: 40px;
   @extend %TTNorms-Bold;
 }
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
