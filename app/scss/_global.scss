@@ -47,6 +47,10 @@ body {
 
 .btn {
   border-radius: 15px;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
 }
 
 .title-h2 {

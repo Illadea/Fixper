@@ -531,5 +531,66 @@ details {
   margin-bottom: 20px;
   padding: 25px 93px 15px 35px;
   line-height: 150%;
+  & li::before {
+    content: url(../images/list-style-type.svg);
+    padding-right: 10px;
+  }
 }
 
+
+.page-section-form {
+  background-image: url(../images/bg-form.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0 100px 0;
+}
+
+// STYLES FOR 9th BLOCK
+.form {
+ background-color: #fff;
+ max-width: 1341px;
+ margin: 0 auto;
+ padding: 50px 84px;
+ border-radius: 15px;
+ &__inner {
+   display: flex;
+   justify-content: space-between;
+ }
+ &__text-info {
+  max-width: 440px;
+ }
+ &__title-h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  @extend %TTNorms-Bold;
+  letter-spacing: -0.015em;
+ }
+ &__text {
+  font-size: 20px;
+  & span {
+    @extend %purple;
+    @extend %TTNorms-Bold;
+  }
+ }
+ &__input input {
+   background-color: #FAFAFA;
+   min-width: 326px;
+   padding: 25px 30px;
+   border-radius: 15px;
+   border: 1px solid #FAFAFA;
+   color: #171717;
+ }
+ &__input input:focus {
+   outline: none;
+ }
+ &__btn {
+  min-width: 314px;
+  background-color: #A95094;
+  border: 1px solid #A95094;
+  padding: 25px 96px;
+  @extend %white;
+  &:focus {
+    outline: none;
+  }
+ }
+}
