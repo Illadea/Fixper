@@ -641,11 +641,14 @@ details {
     margin-bottom: 35px;
   }
   &__button {
-    padding: 18px 40px;
     @extend %purple_intensive;
     border: 2px solid #96317D;
     background-color: #fff;
     max-width: 162px;
+    & a {
+      padding: 18px 40px;
+      display: block;
+    }
     &:hover {
       background-color: #96317D;
       color: #fff;
