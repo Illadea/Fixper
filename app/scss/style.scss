@@ -42,7 +42,9 @@
   &__list {
     display: flex;
     &-item{
-      margin-right: 40px;
+      margin-right: 20px;
+      padding: 10px;
+      cursor: pointer;
       &:hover {
         @extend %black;
         transition: 0.3s;
@@ -69,14 +71,13 @@
   background-repeat: no-repeat;
   background-position: left bottom;
   background-size: contain;
-  position: relative;
 }
 
 .offer {
   @extend %white;
   max-width: 664px;
   max-height: 265px;
-  position: absolute;
+  position: relative;
   left: 44.5vw;
   top: 11vw;
   &__title-h1 {
@@ -114,15 +115,16 @@
   @extend %white;
   background-color: #000000;
   height: 50px;
-  max-width: 100%;
   border-radius: 5px;
-  margin: 0 135px 0 136px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 30px;
+  padding: 15px 30px;
   position: absolute;
-  bottom: 20px;
+  bottom: 0;
+  min-width: 1170px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   &__closing-cross {
     background-image: url(../images/cross-white.svg);
     background-repeat: no-repeat;
@@ -594,3 +596,5 @@ details {
   }
  }
 }
+
+// STYLES FOR 10th BLOCK
