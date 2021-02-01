@@ -65,3 +65,23 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+// STYLES FOR SLIDER
+
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+}
+
+.slick-slider {
+  min-width: 0;
+}
+
+.slick-slide {
+  outline: none;
+}
