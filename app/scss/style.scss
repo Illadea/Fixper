@@ -240,7 +240,6 @@
   }
 }
 
-
 // STYLES FOR 4th BLOCK
 .page-section-price {
   max-width: 971px;
@@ -258,6 +257,7 @@
     &::after {
       content: '';
       background-image: url(../images/show-more-arrow.svg);
+      background-repeat: no-repeat;
       position: absolute;
       width: 26px;
       height: 26px;
@@ -284,6 +284,9 @@
     @extend %black;
     @extend %TTNorms-Medium;
     text-align: right;
+  }
+  &__price-show-more {
+    display: none;
   }
   &__no-price {
     @extend %purple_intensive;

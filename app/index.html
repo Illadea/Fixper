@@ -22,6 +22,7 @@
   <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16" data-mce-href="images/favicon/favicon-16x16.png">
   <link rel="stylesheet" href="css/style.min.css">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=8f8eec68-9aca-40a7-86b8-9283804d41f9&lang=ru_RU" type="text/javascript"></script>
+  <script src="//api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
 </head>
 <body>
  <header class="header">
@@ -37,7 +38,7 @@
         <li class="nav__list-item"><a href="#contacts">Контакты</a></li>
       </ul>
     </nav>
-    <div class="geo-tag">Москва</div>
+    <div class="geo-tag"><span id="user-city"></span></div>
     <a class="btn header__btn" href="tel:88009000000">Позвонить</a>
   </div>
  </header>
@@ -134,6 +135,21 @@
           <td>Замена подшипников</td>
           <td class="table__price">от 1450₽</td>
           <td class="table__price">750₽</td>
+        </tr>
+        <tr class="table__price-show-more">
+          <td>Замена люка</td>
+          <td class="table__price">от 1250₽</td>
+          <td class="table__price">650₽</td>
+        </tr>
+        <tr class="table__price-show-more">
+          <td>Замена сетевого фильтра</td>
+          <td class="table__price">от 1550₽</td>
+          <td class="table__price">350₽</td>
+        </tr>
+        <tr class="table__price-show-more">
+          <td>Замена сливного шланга</td>
+          <td class="table__price">от 1200₽</td>
+          <td class="table__price">450₽</td>
         </tr>
       </table>
       <div class="page-section-price__show-more">Показать все цены</div>

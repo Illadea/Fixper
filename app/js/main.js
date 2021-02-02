@@ -1,27 +1,37 @@
+// Определение GEO пользователя
+window.onload = function () {
+  jQuery("#user-city").text(ymaps.geolocation.city); 
+};
 
+
+// Настройки Slick-слайдера
 $(document).ready(function(){
   $('.slider-testimonials').slick({
     dots: true,
     slidesToShow: 2,
     slidesToScroll: 2,
-    infinite: false,
+    infinite: true,
     autoplay: true,
-    autoplaySpeed: 2000
+    autoplaySpeed: 3000
   });
 });
 
+
+// Настройки Slick-слайдера
 $(document).ready(function(){
   $('.slider-team').slick({
     dots: true,
     slidesToShow: 3,
     slidesToScroll: 3,
-    infinite: false,
+    infinite: true,
     autoplay: true,
-    autoplaySpeed: 2000
+    autoplaySpeed: 3000
   });
 });
 
 
+
+// Яндекс Карта 
 ymaps.ready(init);
 
 function init() {
@@ -48,5 +58,12 @@ function init() {
   // Размещение геообъекта на карте.
   myMap.geoObjects.add(geoObjectOffice)
                   .add(geoObjectCallcenter);
-}
+};
 
+
+// Кнопка "Показать все цены" 
+
+$( '.page-section-price__show-more' ).click(function() {
+  $(".table__price-show-more").slideDown("slow");
+  $(".page-section-price__show-more").hide();
+});
