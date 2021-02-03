@@ -346,6 +346,7 @@
   max-width: 971px;
   @extend %TTNorms-Regular;
   margin-bottom: 50px;
+  border-spacing: 0;
   & td {
     padding: 25px 5px 25px 5px;
     border-bottom: 1px solid #ECECEC;
@@ -534,7 +535,7 @@
 
 @media (max-width: 800px){
   .team-card-container{
-    max-width: 350px;
+    max-width: 320px;
   }
   .team-card-item__image img {
     width: 320px;
