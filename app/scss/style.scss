@@ -6,7 +6,7 @@
 
 // Header
 .header {
-  padding-top: 45px;
+  padding: 45px 30px 0 30px;
   background-color:#A95094;
   min-height: 10vh;
   &__container {
@@ -63,6 +63,33 @@
   }
 }
 
+@media (max-width: 1315px) {
+  .nav {
+    &__list-item {
+      margin-right: 15px;
+      padding: 5px;
+    }
+  }
+}
+
+@media (max-width: 1113px) {
+  .header {
+    &__container {
+      display: block;
+    }
+  }
+  .logo {
+    position: absolute;
+    top: 97px;
+    left: 30px;
+  }
+  .geo-tag {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+  }
+}
+
 // STYLES FOR 1-st BLOCK
 .page-section-first-screen {
   background-color:#A95094;
@@ -71,6 +98,8 @@
   background-repeat: no-repeat;
   background-position: left bottom;
   background-size: contain;
+  padding-right: 58px;
+  padding-left: 58px;
 }
 
 .offer {
@@ -85,6 +114,7 @@
     @extend %TTNorms-ExtraBold;
     margin-bottom: 25px;
     line-height: 95%;
+    max-width: 664px;
   }
   &__text {
     font-size: 20px;
@@ -162,30 +192,74 @@
 // STYLES FOR 2-d BLOCK
 .page-section-advantages {
   background-color: #fff;
-  padding: 75px 184px;
+  padding: 116px 184px;
   &__inner {
     max-width: 1072px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
 .advantage {
-  max-width: 184px;
+  flex-basis: 16%;
   &__img {
     margin-bottom: 30px;
+    min-width: 125px;
   }
   &__text {
     line-height: 120%;
     font-size: 20px;
+    min-width: 183px;
   }
 }
+
+@media (max-width: 1230px) {
+  .page-section-advantages{
+    padding: 75px 75px 25px 75px;
+  }
+  .advantage {
+    flex-basis: 40%;
+    margin-bottom: 50px;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 830px) {
+  .page-section-advantages{
+    padding: 65px 90px 15px 90px;
+  }
+  .advantage {
+    flex-basis: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 560px) {
+  .page-section-advantages{
+    padding: 65px 30px 15px 30px;
+  }
+  .advantage__text {
+    font-size: 18px;
+  }
+  .advantage__img img{
+    max-width: 64px;
+  }
+  .advantage__img {
+    min-width: 92px;
+  }
+}
+
+
 
 // STYLES FOR 3-d BLOCK
 .page-section-online-diagnostics {
   background-color: #FAFAFA;
-  padding: 115px 0 149px 0;
+  padding: 115px 30px 149px 30px;
   background-image: url(../images/bg-online-diagnosics.png);
   background-repeat: no-repeat;
   background-position: right;
@@ -242,18 +316,19 @@
 
 // STYLES FOR 4th BLOCK
 .page-section-price {
-  max-width: 971px;
+  max-width: 1031px;
   margin: 0 auto;
-  padding: 100px 0 100px 0;
+  padding: 100px 30px 100px 30px;
   &__title-h2 {
     text-align: center;
     margin-bottom: 50px;
   }
   &__show-more {
-    text-align: center;
     @extend %purple_intensive;
     position: relative;
     cursor: pointer;
+    max-width: 175px;
+    margin: 0 auto;
     &::after {
       content: '';
       background-image: url(../images/show-more-arrow.svg);
@@ -261,18 +336,18 @@
       position: absolute;
       width: 26px;
       height: 26px;
-      right: 380px;
+      right: 0px;
       top: -4px;
     }
   }
 }
 
 .table {
-  min-width: 971px;
+  max-width: 971px;
   @extend %TTNorms-Regular;
   margin-bottom: 50px;
   & td {
-    padding: 25px 0 25px 0;
+    padding: 25px 5px 25px 5px;
     border-bottom: 1px solid #ECECEC;
   }
   & th {
@@ -307,20 +382,26 @@
   }
 }
 
+@media (max-width: 783px){
+  .page-section-price {
+    padding: 50px 30px 50px 30px;
+  }
+}
+
 // STYLES FOR 5th BLOCK
 .page-section-team {
   background-color: #FAFAFA;
-  padding: 100px 0 100px 0;
+  padding: 100px 30px 100px 30px;
   & span {
     font-size: 20px;
     @extend %purple_intensive;
-    margin: 0 auto 10px;
-    max-width: 290px;
+    text-align: center;
+    margin-bottom: 10px;
     display: block;
   }
   &__title-h2 {
-    max-width: 815px;
-    margin: 0 auto 50px;
+    text-align: center;
+    margin-bottom: 50px;
   }
 }
 
@@ -334,14 +415,13 @@
 .team-card-item {
   background-color: #FFFFFF;
   border-radius: 10px;
-  max-height: 649px;
   margin-right: 30px;
   overflow: hidden;
   &__image img {
     border-radius: 10px 10px 0 0;
   }
   &__info {
-    padding: 50px 97px 50px 45px;
+    padding: 50px 45px;
   }
   &__name {
     font-size: 24px;
@@ -401,7 +481,6 @@
     margin-top: 35px;
     position: absolute;
     bottom: -44px;
-    left: -12px;
     & li {
       list-style-type: none;
       margin: 0 10px;
@@ -444,10 +523,28 @@
 
 }
 
+@media (max-width: 1280px){
+  .team-card-container{
+    max-width: 730px;
+  }
+  .team-card-item__image img {
+    width: 345px;
+  }
+}
+
+@media (max-width: 800px){
+  .team-card-container{
+    max-width: 350px;
+  }
+  .team-card-item__image img {
+    width: 320px;
+  }
+}
+
 
 // STYLES FOR 6th BLOCK
 .page-section-testimonials {
-  padding: 100px 0 100px 0;
+  padding: 100px 30px 100px 30px;
   &__title-h2 {
     text-align: center;
     margin-bottom: 50px;
@@ -574,7 +671,7 @@
 
 // STYLES FOR 7th BLOCK
 .page-section-rating {
-  padding: 50px 0 50px 0;
+  padding: 50px 30px 50px 30px;
   background-color: #FAFAFA;
 }
 
@@ -633,7 +730,7 @@
 
 // STYLES FOR 8th BLOCK
 .page-section-faq {
-  padding: 100px 0 100px 0;
+  padding: 100px 30px 100px 30px;
   &__inner {
     max-width: 1157px;
     margin: 0 auto;
@@ -714,7 +811,7 @@ details {
   background-image: url(../images/bg-form.png);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 100px 0 100px 0;
+  padding: 100px 30px 100px 30px;
 }
 
 // STYLES FOR 9th BLOCK
@@ -773,7 +870,7 @@ details {
 
 // STYLES FOR 10th BLOCK
 .page-section-contacts {
-  padding: 100px 0 100px 0;
+  padding: 100px 30px 100px 30px;
   max-width: 1186px;
   margin: 0 auto;
   &__inner {

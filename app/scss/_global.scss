@@ -44,6 +44,11 @@ body {
   max-width: 1170px;
   margin: 0 auto;
 }
+@media (max-width: 1315px) {
+  .container {
+    max-width: 1050px;
+  }
+}
 
 .btn {
   border-radius: 15px;
@@ -58,6 +63,12 @@ body {
   letter-spacing: -0.015em;
   line-height: 40px;
   @extend %TTNorms-Bold;
+}
+
+@media (max-width: 783px){
+  .title-h2{
+    font-size: 30px;
+  }
 }
 
 .flex {
@@ -84,4 +95,17 @@ body {
 
 .slick-slide {
   outline: none;
+  width: 370px;
+}
+
+@media (max-width: 1280px) {
+  .slick-slide {
+    width: 345px;
+  }
+}
+
+@media (max-width: 800px) {
+  .slick-slide {
+    width: 320px;
+  }
 }

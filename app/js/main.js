@@ -23,9 +23,27 @@ $(document).ready(function(){
     dots: true,
     slidesToShow: 3,
     slidesToScroll: 3,
+    variableWidth: true,
     infinite: true,
-    autoplay: true,
-    autoplaySpeed: 3000
+    // autoplay: true,
+    // autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false
+        }
+      }
+    ]
   });
 });
 
