@@ -1,10 +1,4 @@
-// Определение GEO пользователя
-window.onload = function () {
-  jQuery("#user-city").text(ymaps.geolocation.city); 
-};
-
-
-// Настройки Slick-слайдера
+// Настройки Slick-слайдера для раздела .page-section-testimonials
 $(document).ready(function(){
   $('.slider-testimonials').slick({
     dots: true,
@@ -17,7 +11,7 @@ $(document).ready(function(){
 });
 
 
-// Настройки Slick-слайдера
+// Настройки Slick-слайдера для раздела .page-section-team
 $(document).ready(function(){
   $('.slider-team').slick({
     dots: true,
@@ -47,9 +41,13 @@ $(document).ready(function(){
   });
 });
 
+// Определение ГЕО пользователя для отображения города в .geo-tag
+window.onload = function () {
+  jQuery("#user-city").text(ymaps.geolocation.city); 
+};
 
 
-// Яндекс Карта 
+// Яндекс Карта для раздела .page-section-contacts
 ymaps.ready(init);
 
 function init() {
@@ -65,13 +63,13 @@ function init() {
             preset: 'islands#dotIcon',
             iconColor: '#96317D'
         });
-        var geoObjectCallcenter = new ymaps.Placemark([55.774715, 37.625154], {
-          iconCaption: 'Fixper (диспетчерская)',
-          balloonContent: '<strong>Москва, Троицкая улица, 10с1</strong> <br>7:00—23:00 без выходных'
-          }, {
-          preset: 'islands#dotIcon',
-          iconColor: '#96317D'
-      });
+    var geoObjectCallcenter = new ymaps.Placemark([55.774715, 37.625154], {
+            iconCaption: 'Fixper (диспетчерская)',
+            balloonContent: '<strong>Москва, Троицкая улица, 10с1</strong> <br>7:00—23:00 без выходных'
+            }, {
+            preset: 'islands#dotIcon',
+            iconColor: '#96317D'
+        });
 
   // Размещение геообъекта на карте.
   myMap.geoObjects.add(geoObjectOffice)
@@ -79,9 +77,34 @@ function init() {
 };
 
 
-// Кнопка "Показать все цены" 
-
+// Кнопка "Показать все цены" в .page-section-price__show-more
 $( '.page-section-price__show-more' ).click(function() {
   $(".table__price-show-more").slideDown("slow");
   $(".page-section-price__show-more").hide();
 });
+
+
+// Попап окно "Вызов мастера" .popup
+
+
+var popup = document.getElementById("popup");
+var popupButton = document.querySelector(".popup-button");
+var popupCloseButton = document.getElementsByClassName("popup__close")[0];
+
+// When the user clicks on the button, open the modal
+popupButton.onclick = function() {
+  popup.style.display = "block";
+}
+
+// When the user clicks on (x), close the modal
+popupCloseButton.onclick = function() {
+  popup.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  console.log(event.target);
+  if (event.target == popup) {
+    popup.style.display = "none";
+  }
+}
