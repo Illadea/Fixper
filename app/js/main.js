@@ -5,8 +5,24 @@ $(document).ready(function(){
     slidesToShow: 2,
     slidesToScroll: 2,
     infinite: true,
-    autoplay: true,
-    autoplaySpeed: 3000
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 1320,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          arrows: false
+        }
+      }
+    ]
+    // autoplay: true,
+    // autoplaySpeed: 3000
   });
 });
 
@@ -19,8 +35,8 @@ $(document).ready(function(){
     slidesToScroll: 3,
     variableWidth: true,
     infinite: true,
-    // autoplay: true,
-    // autoplaySpeed: 3000,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1280,

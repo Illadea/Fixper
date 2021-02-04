@@ -551,6 +551,10 @@
     margin-bottom: 50px;
     font-size: 40px;
   }
+  &__container {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
 }
 
 .testimonial-card {
@@ -558,12 +562,7 @@
   background: linear-gradient(0deg, #FAFAFA, #FAFAFA), #FAE6F5;
   max-height: 417px;
   min-height: 417px;
-  &:nth-child(2n+1){
-    margin-right: 15px;
-  }
-  &:nth-child(2n){
-    margin-left: 15px;
-  }
+  margin-right: 30px;
   &__inner {
     padding: 75px 50px;
   }
@@ -669,11 +668,57 @@
 
 }
 
+@media (max-width: 1320px) {
+  .page-section-testimonials {
+    &__container {
+      max-width: 570px;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .page-section-testimonials {
+    padding: 70px 30px 70px 30px;
+    &__container {
+      max-width: 320px;
+    }
+    &__title-h2 {
+      margin-bottom: 35px;
+      font-size: 30px;
+    }
+  }
+  .testimonial-card {
+    max-width: 300px;
+    min-width: 300px;
+    max-height: 320px;
+    &__inner {
+      padding: 35px 30px;
+    }
+    &__text {
+      max-width: 270px;
+      font-size: 16px;
+      margin-top: 15px;
+    }
+    &__name {
+      font-size: 18px;
+    }
+    &__image img {
+      width: 54px;
+      height: 54px;
+    }
+  }
+} 
+
 
 // STYLES FOR 7th BLOCK
 .page-section-rating {
   padding: 50px 30px 50px 30px;
   background-color: #FAFAFA;
+  &__flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .rate-card {
@@ -725,6 +770,46 @@
       position: relative;
       bottom: 14px;
       right: 3px;
+    }
+  }
+}
+
+@media (max-width: 1320px) {
+  .page-section-rating {
+    &__flex {
+      align-items: flex-start;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .rate-card {
+    margin: 0px 0px 25px 0px;
+  }
+}
+
+@media (max-width: 440px) {
+  .rate-card {
+    margin: 0px 0px 25px 0px;
+    min-width: 260px;
+    padding: 22px 22px;
+    &__rating {
+      font-size: 16px;
+    }
+    &__rating span {
+      font-size: 20px;
+    }
+    &__number-of-rating {
+      font-size: 13px;
+    }
+    &__rating-info {
+      margin-right: 0;
+    }
+    &__img img {
+      bottom: -3px;
+      right: -21px;
+    }
+    &__img::before {  
+      display: none;
     }
   }
 }
@@ -786,6 +871,7 @@ summary:after {
   position: absolute;
   top: -8px;
   right: -50px;
+  margin-left: 20px;
 }
 
 details {
@@ -807,7 +893,50 @@ details {
   }
 }
 
+@media (max-width: 1320px) {
+  .page-section-faq {
+    &__inner {
+    flex-direction: column;
+    align-items: center;
+    }
+    &__title-h2 {
+      max-width: 577px;
+      text-align: center;
+    }
+    &__text {
+      max-width: 527px;
+      text-align: center;
+    }
+    &__title-info {
+      margin-right: 0;
+    }
+  }
+  details {
+    font-size: 16px;
+    min-width: 722px;
+    max-width: 722px;
+  }
+  summary {
+    font-size: 18px;
+  }
+}
 
+@media (max-width: 900px) {
+  details {
+    min-width: 522px;
+    max-width: 522px;
+  }
+}
+
+@media (max-width: 590px) {
+  details {
+    min-width: 312px;
+    max-width: 312px;
+  }
+}
+
+
+// STYLES FOR 9th BLOCK
 .page-section-form {
   background-image: url(../images/bg-form.png);
   background-repeat: no-repeat;
@@ -815,7 +944,6 @@ details {
   padding: 100px 30px 100px 30px;
 }
 
-// STYLES FOR 9th BLOCK
 .form {
  background-color: #fff;
  max-width: 1341px;
