@@ -182,6 +182,20 @@
 }
 
 @media (max-width: 1320px) {
+  .page-section-first-screen {
+    background-position: center bottom;
+    background-size: 800px;
+  }
+  .offer {
+    float: unset;
+    margin: 0 auto;
+    padding-top: 30px;
+    text-align: center;
+    &__text {
+      max-width: unset;
+      margin-bottom: 300px;
+    }
+  }
  .small-banner {
    bottom: -9px;
    left: 0;
@@ -196,8 +210,35 @@
      margin-bottom: 10px;
      padding-right: 0;
    }
+   &__get-discount {
+     margin-bottom: 10px;
+   }
  }
 }
+
+@media (max-width: 740px) {
+  .page-section-first-screen {
+    background-position: left bottom;
+    background-size: 800px;
+  }
+  .offer {
+    &__title-h1 {
+      font-size: 38px;
+    }
+    &__text {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .page-section-first-screen  {
+    background-image: url(../images/main-image-mobile.png);
+    background-size: 100%;
+    background-position: bottom right;
+  }
+}
+
 
 // STYLES FOR 2-d BLOCK
 .page-section-advantages {
