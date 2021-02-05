@@ -534,11 +534,20 @@
 }
 
 @media (max-width: 800px){
+  .page-section-team {
+    padding: 70px 30px 70px 30px;
+    &__title-h2 {
+      margin-bottom: 25px;
+    }
+  }
   .team-card-container{
     max-width: 320px;
   }
   .team-card-item__image img {
-    width: 320px;
+    width: 315px;
+  }
+  .team-card-item__info {
+    padding: 30px 45px;
   }
 }
 
@@ -922,9 +931,13 @@ details {
 }
 
 @media (max-width: 900px) {
+  .page-section-faq {
+    padding: 70px 30px 70px 30px;
+  }
   details {
     min-width: 522px;
     max-width: 522px;
+    padding: 25px 68px 15px 35px;
   }
 }
 
@@ -932,6 +945,12 @@ details {
   details {
     min-width: 312px;
     max-width: 312px;
+  }
+  .page-section-faq__title-h2 {
+    font-size: 30px;
+  }
+  .page-section-faq__inner {
+    max-width: 320px;
   }
 }
 
@@ -982,7 +1001,7 @@ details {
    outline: none;
  }
  &__btn {
-  min-width: 314px;
+  min-width: 321px;
   background-color: #A95094;
   border: 1px solid #A95094;
   padding: 25px 96px;
@@ -996,6 +1015,49 @@ details {
   }
  }
 }
+
+@media (max-width: 1340px) {
+  .form {
+    max-width: 500px;
+    &__inner {
+    flex-direction: column;
+    text-align: center;
+    }
+    &__input {
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media (max-width: 590px) {
+  .page-section-form {
+    padding: 50px 30px 50px 30px;
+  }
+  .form {
+    max-width: 300px;
+    padding: 43px 20px;
+    &__title-h2 {
+      font-size: 30px;
+    }
+    &__text {
+      font-size: 16px;
+    }
+    &__input {
+      margin-top: 20px;
+      margin-bottom: 15px;
+      & input {
+        min-width: 200px;
+        padding: 20px 20px;
+      }
+    }
+    &__btn {
+      min-width: 220px;
+      padding: 20px 20px;
+    }
+  }
+}
+
 
 // STYLES FOR 10th BLOCK
 .page-section-contacts {
@@ -1040,10 +1102,7 @@ details {
     border: 2px solid #96317D;
     background-color: #fff;
     max-width: 162px;
-    & a {
-      padding: 18px 40px;
-      display: block;
-    }
+    padding: 18px 40px;
     &:hover {
       background-color: #96317D;
       color: #fff;

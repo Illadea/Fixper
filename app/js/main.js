@@ -6,6 +6,8 @@ $(document).ready(function(){
     slidesToScroll: 2,
     infinite: true,
     variableWidth: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1320,
@@ -21,8 +23,6 @@ $(document).ready(function(){
         }
       }
     ]
-    // autoplay: true,
-    // autoplaySpeed: 3000
   });
 });
 
@@ -105,12 +105,25 @@ $( '.page-section-price__show-more' ).click(function() {
 
 var popup = document.getElementById("popup");
 var popupButton = document.querySelector(".popup-button");
+var popupButtonHeader = document.querySelector(".popup-button-header");
+var popupButtonFooter = document.querySelector(".popup-button-footer");
 var popupCloseButton = document.getElementsByClassName("popup__close")[0];
 
 // When the user clicks on the button, open the modal
 popupButton.onclick = function() {
   popup.style.display = "block";
 }
+
+// When the user clicks on the button in the header, open the modal
+popupButtonHeader.onclick = function() {
+  popup.style.display = "block";
+}
+
+// When the user clicks on the button in the footer, open the modal
+popupButtonFooter.onclick = function() {
+  popup.style.display = "block";
+}
+
 
 // When the user clicks on (x), close the modal
 popupCloseButton.onclick = function() {
