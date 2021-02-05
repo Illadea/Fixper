@@ -94,7 +94,7 @@ function init() {
 
 
 // Кнопка "Показать все цены" в .page-section-price__show-more
-$( '.page-section-price__show-more' ).click(function() {
+$('.page-section-price__show-more').click(function() {
   $(".table__price-show-more").slideDown("slow");
   $(".page-section-price__show-more").hide();
 });

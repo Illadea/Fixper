@@ -98,23 +98,21 @@
   background-repeat: no-repeat;
   background-position: -183px bottom;
   background-size: contain;
-  padding-right: 58px;
-  padding-left: 58px;
+  padding-right: 30px;
+  padding-left: 30px;
+  position: relative;
 }
 
 .offer {
   @extend %white;
   max-width: 664px;
-  max-height: 265px;
-  position: relative;
-  left: 44.5vw;
-  top: 11vw;
+  float: right;
+  margin-top: 200px;
   &__title-h1 {
     font-size: 67px;
     @extend %TTNorms-ExtraBold;
     margin-bottom: 25px;
     line-height: 95%;
-    max-width: 664px;
   }
   &__text {
     font-size: 20px;
@@ -130,12 +128,12 @@
     padding: 18px 50px;
     background-color: #000000;
     cursor: pointer;
-    border: 2px solid #000000;
+    border: 1px solid #000000;
     @extend %white;
     &:hover {
       @extend %black;
       background-color: #FFC464;
-      border: 2px solid #FFC464;
+      border: 1px solid #FFC464;
       transition: 0.3s;
     } 
   }
@@ -144,27 +142,21 @@
 .small-banner {
   @extend %white;
   background-color: #000000;
-  height: 50px;
   border-radius: 5px;
   padding: 15px 30px;
   position: absolute;
   bottom: 25px;
-  min-width: 1170px;
+  max-width: 1170px;
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  &__closing-cross {
-    background-image: url(../images/cross-white.svg);
-    background-repeat: no-repeat;
-    width: 11px;
-    height: 11px;
-  }
   &__text {
     line-height: 20px;
     position: relative;
-    padding-left: 20px;
+    padding-left: 27px;
+    padding-right: 300px;
     @extend %TTNorms-Bold;
     & span {
       @extend %yellow;
@@ -187,6 +179,24 @@
       margin-left: 25px;
     }
   }
+}
+
+@media (max-width: 1320px) {
+ .small-banner {
+   bottom: -9px;
+   left: 0;
+   border-radius: 0px;
+   min-width: 100%;
+   &__inner{
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+   }
+   &__text {
+     margin-bottom: 10px;
+     padding-right: 0;
+   }
+ }
 }
 
 // STYLES FOR 2-d BLOCK
