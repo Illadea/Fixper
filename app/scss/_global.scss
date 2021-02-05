@@ -143,7 +143,7 @@ body {
   &__form-text {
     font-size: 20px;
     line-height: 24px;
-    min-width: 440px;
+    text-align: center;
     & span {
       @extend %purple;
       @extend %TTNorms-Bold;
@@ -183,5 +183,47 @@ body {
     cursor: pointer;
   }
 }
+
+@media (max-width: 800px) {
+  .popup {
+    &__content {
+      max-width: 572px;
+    }
+    &__form-text {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  .popup {
+    &__content {
+      max-width: 472px;
+    }
+  }
+}
+
+
+@media (max-width: 520px) {
+  .popup {
+    &__content {
+      max-width: 300px;
+      padding: 56px 20px;
+      margin: 10vh auto;
+    }
+    &__close {
+      font-size: 42px;
+    }
+    &__form-input input {
+        min-width: 240px;
+    }
+    &__form-btn {
+      min-width: 240px;
+      padding: 25px 32px;
+    }
+  }
+}
+
+
 
 

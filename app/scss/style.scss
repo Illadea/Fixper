@@ -96,7 +96,7 @@
   min-height: 90vh;
   background-image: url(../images/main-image.png);
   background-repeat: no-repeat;
-  background-position: left bottom;
+  background-position: -183px bottom;
   background-size: contain;
   padding-right: 58px;
   padding-left: 58px;
@@ -867,7 +867,6 @@ summary {
   letter-spacing: -0.02em;
   @extend %TTNorms-Medium;
   padding-bottom: 10px;
-  position: relative;
   &:focus {
     outline: none;
   }
@@ -878,8 +877,8 @@ summary:after {
   content: url(../images/faq-marker.svg);
   transition: transform 0.2s;
   position: absolute;
-  top: -8px;
-  right: -50px;
+  top: 20px;
+  right: 30px;
   margin-left: 20px;
 }
 
@@ -896,6 +895,7 @@ details {
   margin-bottom: 20px;
   padding: 25px 93px 15px 35px;
   line-height: 150%;
+  position: relative;
   & li::before {
     content: url(../images/list-style-type.svg);
     padding-right: 10px;
@@ -945,6 +945,9 @@ details {
   details {
     min-width: 312px;
     max-width: 312px;
+  }
+  summary {
+    padding-right: 10px;
   }
   .page-section-faq__title-h2 {
     font-size: 30px;
@@ -1069,7 +1072,7 @@ details {
     justify-content: flex-start;
   }
   &__map {
-    min-width: 731px;
+    width: 731px;
     height: 580px;
     margin-right: 75px;
   }
@@ -1112,11 +1115,52 @@ details {
   }
 }
 
+@media (max-width: 1160px)  {
+  .page-section-contacts {
+    padding: 70px 30px 70px 30px;
+    &__title-h2 {
+      margin-top: 0;
+    }
+    &__inner {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    &__info {
+      max-width: none;
+      text-align: center;
+    }
+    &__descripion {
+      margin-bottom: 23px;
+    }
+    &__email {
+      margin-bottom: 20px;
+    }
+    &__map {
+      margin-right: 0px;
+      margin-top: 25px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .page-section-contacts__map {
+    width: 400px;
+    height: 380px;
+  }
+}
+
+@media (max-width: 460px) {
+  .page-section-contacts__map {
+    width: 300px;
+    height: 300px;
+  }
+}
+
 // STYLES FOR FOOTER BLOCK
 .footer {
   max-width: 1338px;
   margin: 0 auto;
-  padding-bottom: 30px;
+  padding: 0px 30px 30px 30px;
   &__logo {
     text-align: center;
     margin-bottom: 35px;
@@ -1125,6 +1169,9 @@ details {
     display: flex;
     justify-content: space-between;
     @extend %TTNorms-Regular;
+    &-text {
+      padding: 10px 0px;
+    }
   }
 }
 
@@ -1135,6 +1182,10 @@ details {
     display: flex;
     justify-content: space-between;
     margin-bottom: 49px;
+    flex-wrap: wrap;
+    &-item {
+      padding: 10px 10px;
+    }
     &-item:hover{
       @extend %purple_intensive;
     }
@@ -1142,20 +1193,69 @@ details {
 }
 
 .payment {
-  max-width: 1338px;
-  margin: 0 auto;
   background-color: #FAFAFA;
   border-radius: 15px;
-  padding: 35px 270px;
+  padding: 35px 240px;
   margin-bottom: 50px;
   &__inner {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
+  }
+  &__list-item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
   }
   &__item {
     padding: 17px 27px;
     background-color: #fff;
     border-radius: 15px;
+    margin: 0 7px 10px;
+  }
+}
+
+@media (max-width: 1350px) {
+  .payment {
+    padding: 35px 50px 15px 35px;
+    &__text {
+      margin: 0 auto 15px;
+    }
+    &__list-item {
+      margin: 0 auto 15px;
+    }
+  }
+}
+
+
+@media (max-width: 900px) {
+  .payment {
+    &__list-item {
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .footer-nav {
+    max-width: 326px;
+    &__list {
+      justify-content: center;
+    }
+  }
+  .payment {
+    margin-bottom: 35px;
+  }
+  .footer__info {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 440px) {
+  .footer__info {
+    align-items: flex-start;
   }
 }

@@ -69,7 +69,7 @@ ymaps.ready(init);
 function init() {
     var myMap = new ymaps.Map("map", {
               center: [55.766238, 37.605726],
-              zoom: 13
+              zoom: 11
         });
     // Создаем геообъект
     var geoObjectOffice = new ymaps.Placemark([55.765954, 37.565147], {
