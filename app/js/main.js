@@ -57,6 +57,7 @@ $(document).ready(function(){
   });
 });
 
+
 // Определение ГЕО пользователя для отображения города в .geo-tag
 window.onload = function () {
   jQuery("#user-city").text(ymaps.geolocation.city); 
@@ -65,7 +66,6 @@ window.onload = function () {
 
 // Яндекс Карта для раздела .page-section-contacts
 ymaps.ready(init);
-
 function init() {
     var myMap = new ymaps.Map("map", {
               center: [55.766238, 37.605726],
@@ -86,7 +86,6 @@ function init() {
             preset: 'islands#dotIcon',
             iconColor: '#96317D'
         });
-
   // Размещение геообъекта на карте.
   myMap.geoObjects.add(geoObjectOffice)
                   .add(geoObjectCallcenter);
@@ -101,35 +100,27 @@ $('.page-section-price__show-more').click(function() {
 
 
 // Попап окно "Вызов мастера" .popup
-
-
 var popup = document.getElementById("popup");
 var popupButton = document.querySelector(".popup-button");
 var popupButtonHeader = document.querySelector(".popup-button-header");
 var popupButtonFooter = document.querySelector(".popup-button-footer");
 var popupCloseButton = document.getElementsByClassName("popup__close")[0];
-
 // When the user clicks on the button, open the modal
 popupButton.onclick = function() {
   popup.style.display = "block";
 }
-
 // When the user clicks on the button in the header, open the modal
 popupButtonHeader.onclick = function() {
   popup.style.display = "block";
 }
-
 // When the user clicks on the button in the footer, open the modal
 popupButtonFooter.onclick = function() {
   popup.style.display = "block";
 }
-
-
 // When the user clicks on (x), close the modal
 popupCloseButton.onclick = function() {
   popup.style.display = "none";
 }
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   console.log(event.target);
@@ -137,3 +128,25 @@ window.onclick = function(event) {
     popup.style.display = "none";
   }
 }
+
+
+// Форма обратной связи
+$(document).ready(function() {
+	//E-mail Ajax Send
+	$("form").submit(function() { 
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php",
+			data: th.serialize()
+		}).done(function() {
+			alert("Thank you!");
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+			}, 1000);
+		});
+		return false;
+	});
+
+});

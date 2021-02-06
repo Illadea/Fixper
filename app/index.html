@@ -461,7 +461,12 @@
             <div class="form__text">Оставьте заявку сейчас и получите <span>скидку 15%</span></div>
           </div>
           <div class="form__input">
-            <input type="tel" placeholder="Номер телефона">
+            <!-- Hidden Required Fields -->
+            <input type="hidden" name="project_name" value="Fixper">
+            <input type="hidden" name="admin_email" value="sinitcyna.p@gmail.com">
+            <input type="hidden" name="form_subject" value="Заявка с формы в подвале сайта">
+            <!-- END Hidden Required Fields -->
+            <input type="tel" name="phone" placeholder="Номер телефона">
           </div>
           <div class="form__button">
             <button type="submit" class="btn form__btn">Заказать звонок</button>
@@ -541,7 +546,12 @@
                 <div class="popup__form-text">Оставьте заявку сейчас и получите <span>скидку 15%</span></div>
               </div>
               <div class="popup__form-input">
-                <input type="tel" placeholder="Номер телефона">
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="project_name" value="Fixper">
+                <input type="hidden" name="admin_email" value="sinitcyna.p@gmail.com">
+                <input type="hidden" name="form_subject" value="Заявка с Popup Формы">
+                <!-- END Hidden Required Fields -->
+                <input type="tel" name="phone" placeholder="Номер телефона">
               </div>
               <div class="popup__form-button">
                 <button type="submit" class="btn popup__form-btn">Заказать звонок</button>
@@ -552,7 +562,6 @@
     </div>
   </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="js/slick.min.js"></script>
 <script src="js/main.min.js"></script>
 </body>
 </html>
