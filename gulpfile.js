@@ -68,7 +68,7 @@ function build() {
     'app/js/main.min.js',
     'app/*.html',
     'app/*.php',
-    'app/*.robots.txt',
+    'app/*.txt',
   ], {base: 'app'})
     .pipe(dest('dist'))
 }
