@@ -88,7 +88,7 @@
     </section>
     <section class="page-section-online-diagnostics" id="diagnostics">
       <div class="page-section-online-diagnostics__inner">
-        <span>Онлайн-диагностика</span>
+        <!-- <div class="page-section-online-diagnostics__subtitle">Онлайн-диагностика</div>
         <h2 class="title-h2 page-section-online-diagnostics__title-h2">Какая у вас проблема?</h2>
         <div class="page-section-online-diagnostics__problems">
           <a href="" class="page-section-online-diagnostics__problem-item">Не включается</a>
@@ -99,7 +99,33 @@
           <a href="" class="page-section-online-diagnostics__problem-item">Не включается</a>
           <a href="" class="page-section-online-diagnostics__problem-item">Иная проблема</a>
         </div>
-        <div class="page-section-online-diagnostics__text">Выберите проблему и узнайте её решение</div>
+        <div class="page-section-online-diagnostics__text">Выберите проблему и узнайте её решение</div> -->
+        <div class="page-section-online-diagnostics__subtitle-choose-problem">Выбрать другую проблему</div>
+        <h2 class="title-h2 page-section-online-diagnostics__title-h2">Вероятней всего:</h2>
+        <div class="problem-answer">
+          <div class="problem-answer__item">
+            <div class="problem-answer__progress-bar">51 %</div>
+            <div class="problem-answer__description">
+              <div class="problem-answer__description-title">Замена фильтра</div>
+              <div class="problem-answer__description-text">1 200₽<span>+ запчасть от 3 500₽</span></div>
+            </div>
+          </div>
+          <div class="problem-answer__item">
+            <div class="problem-answer__progress-bar">51 %</div>
+            <div class="problem-answer__description">
+              <div class="problem-answer__description-title">Замена фильтра</div>
+              <div class="problem-answer__description-text">1 200₽<span>+ запчасть от 3 500₽</span></div>
+            </div>
+          </div>
+          <div class="problem-answer__item">
+            <div class="problem-answer__progress-bar">51 %</div>
+            <div class="problem-answer__description">
+              <div class="problem-answer__description-title">Замена фильтра</div>
+              <div class="problem-answer__description-text">1 200₽<span>+ запчасть от 3 500₽</span></div>
+            </div>
+          </div>
+          <button class="btn problem-answer__btn popup-button-diagnostics">Вызвать мастера с выездом от 45 минут</button>
+        </div>
       </div>
     </section>
     <section class="page-section-price" id="price">
@@ -560,6 +586,19 @@
           </form>
         </div>
     </div>
+    <div class="popup" id="popup-thank-you">
+      <div class="popup__content">
+        <div class="popup-thank-you__close">&times;</div>
+        <form action="" class="popup__form">
+          <div class="popup__form-inner">
+            <div class="popup__form-text-info">
+              <h2 class="title-h2 popup__form-title-h2">Спасибо!</h2>
+              <div class="popup__form-text">Мы перезвоним вам в течении 15 минут</div>
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
   </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="js/main.min.js"></script>
