@@ -374,9 +374,15 @@
   background-image: url(../images/bg-online-diagnosics.png);
   background-repeat: no-repeat;
   background-position: right;
-  &__inner {
+  height: 730px;
+  &__inner-choose-problem {
     max-width: 1072px;
     margin: 0 auto;
+  }
+  &__inner-problem-choosen {
+    max-width: 1072px;
+    margin: 0 auto;
+    display: none;
   }
   &__subtitle {
     text-transform: uppercase;
@@ -395,6 +401,7 @@
       letter-spacing: 0.05em;
       @extend %TTNorms-Bold;
       cursor: pointer;
+      max-width: 300px;
       &:before {
         content: url(../images/arrow-left.svg);
         margin-right: 25px;
@@ -416,6 +423,7 @@
     border-radius: 15px;
     margin: 0 15px 20px 0;
     background-color: #FAFAFA;
+    cursor: pointer;
     &:hover {
       @extend %white;
       background-color: #96317D;
@@ -446,7 +454,15 @@
     margin-bottom: 35px;
   }
   &__progress-bar {
-    
+    border-radius: 50%;
+    border: 7px solid #FFC464;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    @extend %TTNorms-Bold;
   }
   &__description {
     margin-left: 30px;
@@ -480,12 +496,47 @@
   }
 }
 
-@media (max-width: 560px)  {
+@media (max-width: 1130px) {
   .page-section-online-diagnostics {
-    padding: 70px 30px 70px 30px;
+    background-image: none;
+    &__inner-choose-problem {
+      max-width: 600px;
+    }
+    &__inner-problem-choosen {
+      max-width: 550px;
+    }
+    &__problems {
+      margin-bottom: 15px;
+    }
   }
 }
 
+@media (max-width: 560px)  {
+  .page-section-online-diagnostics {
+    padding: 70px 30px 70px 30px;
+    &__title-h2 {
+      margin-bottom: 25px;
+    }
+    &__subtitle {
+      margin-bottom: 10px;
+    }
+    &__problem-item {
+      margin: 0 15px 10px 0;
+      padding: 15px 20px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .problem-answer {
+    &__progress-bar {
+      font-size: 23px;
+    }
+    &__description {
+      margin-left: 20px;
+    }
+  }
+}
 
 // STYLES FOR 4th BLOCK
 .page-section-price {

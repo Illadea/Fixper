@@ -92,6 +92,18 @@ function init() {
 };
 
 
+// Выбор проблемы в .page-section-online-diagnostics
+$('.page-section-online-diagnostics__problem-item').click(function() {
+  $(".page-section-online-diagnostics__inner-choose-problem").hide();
+  $(".page-section-online-diagnostics__inner-problem-choosen").show("slow");
+});
+// Выбрать другую проблему в .page-section-online-diagnostics
+$('.page-section-online-diagnostics__subtitle-choose-problem').click(function() {
+  $(".page-section-online-diagnostics__inner-problem-choosen").hide();
+  $(".page-section-online-diagnostics__inner-choose-problem").show("slow");
+});
+
+
 // Кнопка "Показать все цены" в .page-section-price__show-more
 $('.page-section-price__show-more').click(function() {
   $(".table__price-show-more").slideDown("slow");
