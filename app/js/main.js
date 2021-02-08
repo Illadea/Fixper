@@ -102,6 +102,41 @@ $('.page-section-online-diagnostics__subtitle-choose-problem').click(function() 
   $(".page-section-online-diagnostics__inner-problem-choosen").hide();
   $(".page-section-online-diagnostics__inner-choose-problem").show("slow");
 });
+// Прогресс-бар в .page-section-online-diagnostics
+
+if ($(window).width() > 450) {
+  $(function() {
+    $('.problem-answer__progress-bar').easyPieChart({
+      barColor: '#FFC464',
+      trackColor: '#e0dcdc',
+      scaleColor: false,
+      lineCap: 'round',
+      lineWidth: 7,
+      size: 100,
+      animate: {
+        duration: 5000,
+        enabled: true
+      },
+    });
+  });
+}
+else {
+  $(function() {
+    $('.problem-answer__progress-bar').easyPieChart({
+      barColor: '#FFC464',
+      trackColor: '#e0dcdc',
+      scaleColor: false,
+      lineCap: 'round',
+      lineWidth: 7,
+      size: 80,
+      animate: {
+        duration: 5000,
+        enabled: true
+      },
+    });
+  });
+}
+
 
 
 // Кнопка "Показать все цены" в .page-section-price__show-more
@@ -178,5 +213,3 @@ $(document).ready(function() {
 		return false;
 	});
 });
-
-

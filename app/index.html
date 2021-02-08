@@ -95,8 +95,8 @@
           <div class="page-section-online-diagnostics__problem-item">Не нагревает воду</div>
           <div class="page-section-online-diagnostics__problem-item">Не крутится барабан</div>
           <div class="page-section-online-diagnostics__problem-item">Не работает кнопка включения</div>
-          <div class="page-section-online-diagnostics__problem-item">Не крутится барабан</div>
-          <div class="page-section-online-diagnostics__problem-item">Не включается</div>
+          <div class="page-section-online-diagnostics__problem-item">Не открывается люк</div>
+          <div class="page-section-online-diagnostics__problem-item">Застрял предмет</div>
           <div class="page-section-online-diagnostics__problem-item">Иная проблема</div>
         </div>
         <div class="page-section-online-diagnostics__text">Выберите проблему и узнайте её решение</div>
@@ -106,24 +106,24 @@
         <h2 class="title-h2 page-section-online-diagnostics__title-h2">Вероятней всего:</h2>
         <div class="problem-answer">
           <div class="problem-answer__item">
-            <div class="problem-answer__progress-bar">51 %</div>
+            <div class="problem-answer__progress-bar" data-percent="51">51 %</div>
             <div class="problem-answer__description">
               <div class="problem-answer__description-title">Замена фильтра</div>
-              <div class="problem-answer__description-text">1 200₽<span>+ запчасть от 3 500₽</span></div>
+              <div class="problem-answer__description-text">1 550₽<span>+ запчасть от 350₽</span></div>
             </div>
           </div>
           <div class="problem-answer__item">
-            <div class="problem-answer__progress-bar">51 %</div>
+            <div class="problem-answer__progress-bar" data-percent="40">40 %</div>
             <div class="problem-answer__description">
-              <div class="problem-answer__description-title">Замена фильтра</div>
-              <div class="problem-answer__description-text">1 200₽<span>+ запчасть от 3 500₽</span></div>
+              <div class="problem-answer__description-title">Замена помпы</div>
+              <div class="problem-answer__description-text">1 900₽<span>+ запчасть от 8800₽</span></div>
             </div>
           </div>
           <div class="problem-answer__item">
-            <div class="problem-answer__progress-bar">51 %</div>
+            <div class="problem-answer__progress-bar" data-percent="30">30 %</div>
             <div class="problem-answer__description">
-              <div class="problem-answer__description-title">Замена фильтра</div>
-              <div class="problem-answer__description-text">1 200₽<span>+ запчасть от 3 500₽</span></div>
+              <div class="problem-answer__description-title">Замена шланга</div>
+              <div class="problem-answer__description-text">1 200₽<span>+ запчасть от 450₽</span></div>
             </div>
           </div>
           <button class="btn problem-answer__btn popup-button-diagnostics">Вызвать мастера с выездом от&nbsp;45&nbsp;минут</button>
@@ -494,7 +494,7 @@
             <input type="hidden" name="admin_email" value="sinitcyna.p@gmail.com">
             <input type="hidden" name="form_subject" value="Заявка с формы в подвале сайта">
             <!-- END Hidden Required Fields -->
-            <input type="tel" name="phone" placeholder="Номер телефона">
+            <input required="" type="tel" name="phone" placeholder="Номер телефона">
           </div>
           <div class="form__button">
             <button type="submit" class="btn form__btn">Заказать звонок</button>
@@ -579,7 +579,7 @@
                 <input type="hidden" name="admin_email" value="sinitcyna.p@gmail.com">
                 <input type="hidden" name="form_subject" value="Заявка с Popup Формы">
                 <!-- END Hidden Required Fields -->
-                <input type="tel" name="phone" placeholder="Номер телефона">
+                <input required="" type="tel" name="phone" placeholder="Номер телефона">
               </div>
               <div class="popup__form-button">
                 <button type="submit" class="btn popup__form-btn">Заказать звонок</button>

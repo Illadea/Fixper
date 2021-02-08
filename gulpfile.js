@@ -41,6 +41,7 @@ function images() {
 function scripts() {
   return src ([
     'app/js/slick.min.js',
+    'app/js/jquery.easypiechart.min.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))
