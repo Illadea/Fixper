@@ -22,7 +22,4 @@ $ npm install --global gulp-cli
 
 # Start's development server
 $ gulp
-
-# Build project
-$ gulp build
 ```
