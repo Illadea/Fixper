@@ -64,34 +64,6 @@ window.onload = function () {
 };
 
 
-// Яндекс Карта для раздела .page-section-contacts
-ymaps.ready(init);
-function init() {
-    var myMap = new ymaps.Map("map", {
-              center: [55.766238, 37.605726],
-              zoom: 11
-        });
-    // Создаем геообъект
-    var geoObjectOffice = new ymaps.Placemark([55.765954, 37.565147], {
-            iconCaption: 'Fixper (офис)',
-            balloonContent: '<strong>Москва, Расторгуевский переулок, 16с1</strong> <br>8:00—21:00 без выходных'
-            }, {
-            preset: 'islands#dotIcon',
-            iconColor: '#96317D'
-        });
-    var geoObjectCallcenter = new ymaps.Placemark([55.774715, 37.625154], {
-            iconCaption: 'Fixper (диспетчерская)',
-            balloonContent: '<strong>Москва, Троицкая улица, 10с1</strong> <br>7:00—23:00 без выходных'
-            }, {
-            preset: 'islands#dotIcon',
-            iconColor: '#96317D'
-        });
-  // Размещение геообъекта на карте.
-  myMap.geoObjects.add(geoObjectOffice)
-                  .add(geoObjectCallcenter);
-};
-
-
 // Выбор проблемы в .page-section-online-diagnostics
 $('.page-section-online-diagnostics__problem-item').click(function() {
   $(".page-section-online-diagnostics__inner-choose-problem").hide();
@@ -103,7 +75,6 @@ $('.page-section-online-diagnostics__subtitle-choose-problem').click(function() 
   $(".page-section-online-diagnostics__inner-choose-problem").show("slow");
 });
 // Прогресс-бар в .page-section-online-diagnostics
-
 if ($(window).width() > 450) {
   $(function() {
     $('.problem-answer__progress-bar').easyPieChart({
@@ -136,7 +107,6 @@ else {
     });
   });
 }
-
 
 
 // Кнопка "Показать все цены" в .page-section-price__show-more
@@ -213,3 +183,31 @@ $(document).ready(function() {
 		return false;
 	});
 });
+
+
+// Яндекс Карта для раздела .page-section-contacts
+ymaps.ready(init);
+function init() {
+    var myMap = new ymaps.Map("map", {
+              center: [55.766238, 37.605726],
+              zoom: 11
+        }); 
+    // Создаем геообъект
+    var geoObjectOffice = new ymaps.Placemark([55.765954, 37.565147], {
+            iconCaption: 'Fixper (офис)',
+            balloonContent: '<strong>Москва, Расторгуевский переулок, 16с1</strong> <br>8:00—21:00 без выходных'
+            }, {
+            preset: 'islands#dotIcon',
+            iconColor: '#96317D'
+        });
+    var geoObjectCallcenter = new ymaps.Placemark([55.774715, 37.625154], {
+            iconCaption: 'Fixper (диспетчерская)',
+            balloonContent: '<strong>Москва, Троицкая улица, 10с1</strong> <br>7:00—23:00 без выходных'
+            }, {
+            preset: 'islands#dotIcon',
+            iconColor: '#96317D'
+        });
+  // Размещение геообъекта на карте.
+  myMap.geoObjects.add(geoObjectOffice)
+                  .add(geoObjectCallcenter);
+};
