@@ -22,9 +22,21 @@
   <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16" data-mce-href="images/favicon/favicon-16x16.png">
   <link rel="stylesheet" href="css/style.min.css">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=8f8eec68-9aca-40a7-86b8-9283804d41f9&lang=ru_RU" type="text/javascript"></script>
-  <script src="//api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
-</head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W6WMD85');
+  </script>
+  <!-- End Google Tag Manager -->
+  </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6WMD85"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
  <header class="header">
   <div class="container header__container">
     <div class="logo"></div>
@@ -38,7 +50,8 @@
         <li class="nav__list-item"><a href="#contacts">Контакты</a></li>
       </ul>
     </nav>
-    <div class="geo-tag"><span id="user-city"></span></div>
+    <!-- Требуется доработка GEO IP -->
+    <div class="geo-tag"><span id="user-city">Москва</span></div>
     <button class="btn header__btn popup-button-header">Позвонить</button>
   </div>
  </header>
@@ -505,7 +518,6 @@
     <section class="page-section-contacts" id="contacts">
       <div class="page-section-contacts__inner">
         <div class="page-section-contacts__map" id="map">
-
         </div>
         <div class="page-section-contacts__info">
           <h2 class="title-h2 page-section-contacts__title-h2">Контактная информация</h2>

@@ -58,12 +58,6 @@ $(document).ready(function(){
 });
 
 
-// Определение ГЕО пользователя для отображения города в .geo-tag
-window.onload = function () {
-  jQuery("#user-city").text(ymaps.geolocation.city); 
-};
-
-
 // Выбор проблемы в .page-section-online-diagnostics
 $('.page-section-online-diagnostics__problem-item').click(function() {
   $(".page-section-online-diagnostics__inner-choose-problem").hide();
@@ -151,14 +145,14 @@ popupThankYouCloseButton.onclick = function() {
   popupThankYou.style.display = "none";
 };
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == popup) {
-    popup.style.display = "none";
-  }
-};
+
+
 window.onclick = function(event) {
   if (event.target == popupThankYou) {
     popupThankYou.style.display = "none";
+  }
+  else if (event.target == popup) {
+    popup.style.display = "none";
   }
 };
 
@@ -188,6 +182,18 @@ $(document).ready(function() {
 // Яндекс Карта для раздела .page-section-contacts
 ymaps.ready(init);
 function init() {
+    //   ymaps.geolocation.get({
+    //     // Зададим способ определения геолокации
+    //     // на основе ip пользователя.
+    //     provider: 'yandex',
+    //     // Включим автоматическое геокодирование результата.
+    //     autoReverseGeocode: true
+    // }).then(function (result) {
+    //     // Выведем результат геокодирования.
+    //     console.log(result.geoObjects.get(0).properties.get('metaDataProperty'));
+    //     сonsole.log(Object.values(GeocoderMetaData));
+    // });
+    // // GeocoderMetaData.AddressDetails.Country.AdministrativeArea.AdministrativeAreaName
     var myMap = new ymaps.Map("map", {
               center: [55.766238, 37.605726],
               zoom: 11
