@@ -111,15 +111,15 @@ $('.page-section-price__show-more').click(function() {
 
 
 // Попап окно "Вызов мастера"
-var popup = document.getElementById("popup");
-var popupButton = document.querySelector(".popup-button");
-var popupButtonHeader = document.querySelector(".popup-button-header");
-var popupButtonFooter = document.querySelector(".popup-button-footer");
-var popupButtonDiagnostics = document.querySelector(".popup-button-diagnostics");
-var popupCloseButton = document.getElementsByClassName("popup__close")[0];
+let popup = document.getElementById("popup");
+let popupButton = document.querySelector(".popup-button");
+let popupButtonHeader = document.querySelector(".popup-button-header");
+let popupButtonFooter = document.querySelector(".popup-button-footer");
+let popupButtonDiagnostics = document.querySelector(".popup-button-diagnostics");
+let popupCloseButton = document.getElementsByClassName("popup__close")[0];
 // Попап окно "Спасибо за заявку"
-var popupThankYou = document.getElementById("popup-thank-you");
-var popupThankYouCloseButton = document.getElementsByClassName("popup-thank-you__close")[0];
+let popupThankYou = document.getElementById("popup-thank-you");
+let popupThankYouCloseButton = document.getElementsByClassName("popup-thank-you__close")[0];
 
 // When the user clicks on the button, open the modal
 popupButton.onclick = function() {
@@ -182,18 +182,17 @@ $(document).ready(function() {
 // Яндекс Карта для раздела .page-section-contacts
 ymaps.ready(init);
 function init() {
-    //   ymaps.geolocation.get({
-    //     // Зададим способ определения геолокации
-    //     // на основе ip пользователя.
-    //     provider: 'yandex',
-    //     // Включим автоматическое геокодирование результата.
-    //     autoReverseGeocode: true
-    // }).then(function (result) {
-    //     // Выведем результат геокодирования.
-    //     console.log(result.geoObjects.get(0).properties.get('metaDataProperty'));
-    //     сonsole.log(Object.values(GeocoderMetaData));
-    // });
-    // // GeocoderMetaData.AddressDetails.Country.AdministrativeArea.AdministrativeAreaName
+      ymaps.geolocation.get({
+        // Зададим способ определения геолокации
+        // на основе ip пользователя.
+        provider: 'yandex',
+        // Включим автоматическое геокодирование результата.
+        autoReverseGeocode: true
+    }).then(function (result) {
+        // Выведем результат геокодирования.
+        let geoTag = document.getElementById('user-city');
+        geoTag.innerHTML = result.geoObjects.get(0).properties.get('metaDataProperty').GeocoderMetaData.AddressDetails.Country.AdministrativeArea.AdministrativeAreaName;
+    });
     var myMap = new ymaps.Map("map", {
               center: [55.766238, 37.605726],
               zoom: 11
