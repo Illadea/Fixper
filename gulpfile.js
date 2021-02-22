@@ -7,6 +7,7 @@ const uglify        = require('gulp-uglify-es').default;
 const autoprefixer  = require('gulp-autoprefixer');
 const imagemin      = require('gulp-imagemin');
 const del           = require('del');
+const sourcemaps    = require('gulp-sourcemaps');
 
 function browsersync() {
   browserSync.init({
@@ -44,20 +45,24 @@ function scripts() {
     'app/js/jquery.easypiechart.min.js',
     'app/js/main.js'
   ])
+  .pipe(sourcemaps.init())
   .pipe(concat('main.min.js'))
   .pipe(uglify())
+  .pipe(sourcemaps.write('../maps'))
   .pipe(dest('app/js'))
   .pipe(browserSync.stream())
 }
 
 function styles() {
   return src('app/scss/style.scss')
+    .pipe(sourcemaps.init())
     .pipe(scss({outputStyle: 'compressed'}))
     .pipe(concat('style.min.css'))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 10 version'],
       grid: true
     }))
+    .pipe(sourcemaps.write('../maps'))
     .pipe(dest('app/css'))
     .pipe(browserSync.stream())
 }

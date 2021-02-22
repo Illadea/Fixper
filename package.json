@@ -19,5 +19,9 @@
     "gulp-uglify-es": "^2.0.0",
     "jquery": "^3.5.1",
     "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sourcemaps": "^3.0.0"
   }
 }
