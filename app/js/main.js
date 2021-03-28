@@ -111,51 +111,38 @@ $('.page-section-price__show-more').click(function() {
 
 
 // Попап окно "Вызов мастера"
-let popup = document.getElementById("popup");
-let popupButton = document.querySelector(".popup-button");
-let popupButtonHeader = document.querySelector(".popup-button-header");
-let popupButtonFooter = document.querySelector(".popup-button-footer");
-let popupButtonDiagnostics = document.querySelector(".popup-button-diagnostics");
-let popupCloseButton = document.getElementsByClassName("popup__close")[0];
-// Попап окно "Спасибо за заявку"
-let popupThankYou = document.getElementById("popup-thank-you");
-let popupThankYouCloseButton = document.getElementsByClassName("popup-thank-you__close")[0];
+const popup = document.getElementById("popup"),
+      popupBtn = document.querySelectorAll(".popup-button"),
+      popupCloseBtn = document.querySelectorAll(".popup__close"),
+      popupThankYou = document.getElementById("popup-thank-you");
 
-// When the user clicks on the button, open the modal
-popupButton.onclick = function() {
-  popup.style.display = "block";
-};
-// When the user clicks on the button in the header, open the modal
-popupButtonHeader.onclick = function() {
-  popup.style.display = "block";
-};
-// When the user clicks on the button in the footer, open the modal
-popupButtonFooter.onclick = function() {
-  popup.style.display = "block";
-};
-// When the user clicks on the button in the diagnostics section, open the modal
-popupButtonDiagnostics.onclick = function() {
-  popup.style.display = "block";
-};
-// When the user clicks on (x), close the modal
-popupCloseButton.onclick = function() {
-  popup.style.display = "none";
-};
-popupThankYouCloseButton.onclick = function() {
-  popupThankYou.style.display = "none";
-};
-// When the user clicks anywhere outside of the modal, close it
+function showPopup() {
+    popupBtn.forEach(item => {
+    item.addEventListener('click', () => {
+      popup.style.display = "block";
+    });
+  });
+}
 
+function closePopup() {
+  popupCloseBtn.forEach(item => {
+    item.addEventListener('click', () => {
+      popup.style.display = "none";
+      popupThankYou.style.display = "none";
+    });
+  });
 
-window.onclick = function(event) {
-  if (event.target == popupThankYou) {
-    popupThankYou.style.display = "none";
-  }
-  else if (event.target == popup) {
-    popup.style.display = "none";
-  }
-};
+  window.addEventListener('click', (event) => {
+    if (event.target == popupThankYou) {
+      popupThankYou.style.display = "none";
+    } else if (event.target == popup) {
+      popup.style.display = "none";
+    }
+  });
+}
 
+showPopup();
+closePopup();
 
 // Форма обратной связи
 $(document).ready(function() {
